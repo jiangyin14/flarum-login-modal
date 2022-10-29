@@ -1,30 +1,17 @@
+import { extend, override } from "flarum/extend";
 import LogInModal from "flarum/forum/components/LogInModal";
 import SignUpModal from "flarum/forum/components/SignUpModal";
 import HeaderSecondary from "flarum/forum/components/HeaderSecondary";
 import LogInButton from "flarum/forum/components/LogInButton";
 import SettingsPage from "flarum/forum/components/SettingsPage";
 
-app.initializers.add('damonhu/flarum-login-modal', () => {
-  console.log('[damonhu/flarum-login-modal] Hello, forum!');
-
-
+app.initializers.add("v17development-flarum-third-party-login-only", (app) => {
   // Hide login form
   extend(LogInModal.prototype, "fields", function (items) {
     items.remove("identification");
     items.remove("password");
     items.remove("remember");
-    // items.remove("submit");
-
-    items.replace(
-      "submit",
-      LogInButton.component(
-        {
-          className: "Button Button--link",
-          path: "/auth/passport",
-        },
-        app.translator.trans("core.forum.header.sign_up_link")
-      )
-    );
+    items.remove("submit");
   });
 
   // Hide sign up form
