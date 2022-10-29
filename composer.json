@@ -2,10 +2,12 @@
     "name": "damonhu/flarum-login-modal",
     "description": "test",
     "keywords": [
-        "flarum"
+        "flarum",
+        "login",
+        "modal"
     ],
     "type": "flarum-extension",
-    "license": "CC-BY-NC-ND-2.0",
+    "license": "MIT",
     "require": {
         "flarum/core": "^1.2.0"
     },
@@ -50,7 +52,7 @@
             }
         }
     },
-    "minimum-stability": "1.0.0",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload-dev": {
         "psr-4": {
