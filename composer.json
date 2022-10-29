@@ -23,7 +23,7 @@
     },
     "extra": {
         "flarum-extension": {
-            "title": "Hu",
+            "title": "flarum-login-modal",
             "category": "",
             "icon": {
                 "name": "",
@@ -50,7 +50,7 @@
             }
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "1.0.0",
     "prefer-stable": true,
     "autoload-dev": {
         "psr-4": {

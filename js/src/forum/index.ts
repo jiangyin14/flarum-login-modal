@@ -1,4 +1,3 @@
-import app from 'flarum/forum/app';
 import LogInModal from "flarum/forum/components/LogInModal";
 import SignUpModal from "flarum/forum/components/SignUpModal";
 import HeaderSecondary from "flarum/forum/components/HeaderSecondary";
