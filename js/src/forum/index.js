@@ -12,18 +12,27 @@ app.initializers.add("flarum-login-modal", (app) => {
     items.remove("password");
     items.remove("remember");
     // items.remove("submit");
+    // items.replace(
+    //   "submit",
+    //   LogInButton.component(
+    //     {
+    //       className: "Button Button--primary",
+    //       path: "/login.php",
+    //     },
+    //     app.translator.trans("core.forum.header.sign_up_link") +
+    //       "/" +
+    //       app.translator.trans("core.forum.header.log_in_link")
+    //   )
+    // );
     items.replace(
       "submit",
-      LogInButton.component(
-        {
-          className: "Button Button--primary",
-          path:
-            "/login.php",
-        },
-        app.translator.trans("core.forum.header.sign_up_link") +
-          "/" +
-          app.translator.trans("core.forum.header.log_in_link")
-      )
+      <a
+        href="https://account.yechan.cn/#/?referer=https%3A%2F%2Fclub.yechan.cn"
+        target={"_blank"}
+        className="Button Button--primary"
+      >
+      app.translator.trans("core.forum.header.sign_up_link") + "/" + app.translator.trans("core.forum.header.log_in_link")
+      </a>
     );
   });
 
