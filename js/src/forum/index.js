@@ -5,13 +5,23 @@ import HeaderSecondary from "flarum/forum/components/HeaderSecondary";
 import LogInButton from "flarum/forum/components/LogInButton";
 import SettingsPage from "flarum/forum/components/SettingsPage";
 
-app.initializers.add("v17development-flarum-third-party-login-only", (app) => {
+app.initializers.add("flarum-login-modal", (app) => {
   // Hide login form
   extend(LogInModal.prototype, "fields", function (items) {
     items.remove("identification");
     items.remove("password");
     items.remove("remember");
-    items.remove("submit");
+    // items.remove("submit");
+    items.replace(
+      "submit",
+      LogInButton.component(
+        {
+          className: "Button Button--link",
+          path: "https://account.yechan.cn/#/?referer=https%3A%2F%2Fclub.yechan.cn",
+        },
+        app.translator.trans("core.forum.header.sign_up_link") + "/" + app.translator.trans("core.forum.header.log_in_link")
+      )
+    );
   });
 
   // Hide sign up form

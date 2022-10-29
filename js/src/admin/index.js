@@ -1,8 +1,8 @@
 import app from "flarum/admin/app";
 
-app.initializers.add("v17development-third-party-login-only", function () {
+app.initializers.add("flarum-login-modal", function () {
   app.extensionData
-    .for("v17development-third-party-login-only")
+    .for("flarum-login-modal")
     .registerSetting({
       label: "Replace Sign In and Sign Up button",
       help: (
@@ -17,7 +17,7 @@ app.initializers.add("v17development-third-party-login-only", function () {
         </span>
       ),
       setting:
-        "v17development-third-party-login-only.replaceLoginWithFoFPassport",
+        "flarum-login-modal.replaceLoginWithFoFPassport",
       type: "switch",
     })
     .registerSetting({
@@ -33,7 +33,7 @@ app.initializers.add("v17development-third-party-login-only", function () {
           </a>
         </span>
       ),
-      setting: "v17development-third-party-login-only.allowChangeMail",
+      setting: "flarum-login-modal.allowChangeMail",
       type: "switch",
     })
     .registerSetting({
@@ -50,7 +50,7 @@ app.initializers.add("v17development-third-party-login-only", function () {
           </a>
         </span>
       ),
-      setting: "v17development-third-party-login-only.forgotPasswordLink",
+      setting: "flarum-login-modal.forgotPasswordLink",
       type: "text",
       placeholder: "https://example.com/forgot",
     })
@@ -67,7 +67,7 @@ app.initializers.add("v17development-third-party-login-only", function () {
           </a>
         </span>
       ),
-      setting: "v17development-third-party-login-only.changePasswordLink",
+      setting: "flarum-login-modal.changePasswordLink",
       type: "text",
       placeholder: "https://example.com/account",
     })
@@ -84,7 +84,7 @@ app.initializers.add("v17development-third-party-login-only", function () {
           </a>
         </span>
       ),
-      setting: "v17development-third-party-login-only.signUpWelcomeText",
+      setting: "flarum-login-modal.signUpWelcomeText",
       type: "text",
       placeholder: "",
     });
