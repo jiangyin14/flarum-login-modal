@@ -16,9 +16,10 @@ app.initializers.add("flarum-login-modal", (app) => {
       "submit",
       LogInButton.component(
         {
-          className: "Button Button--link",
-          path:
-            "https://account.yechan.cn/#/?referer=https%3A%2F%2Fclub.yechan.cn",
+          className: "Button Button--primary",
+          onclick: function(){
+            window.location.href = "https://account.yechan.cn/#/?referer=https%3A%2F%2Fclub.yechan.cn"
+          },
         },
         app.translator.trans("core.forum.header.sign_up_link") +
           "/" +
