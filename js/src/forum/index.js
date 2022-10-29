@@ -28,10 +28,11 @@ app.initializers.add("flarum-login-modal", (app) => {
       "submit",
       <a
         href="https://account.yechan.cn/#/?referer=https%3A%2F%2Fclub.yechan.cn"
-        target={"_blank"}
+        target={"_top"}
         className="Button Button--primary"
       >
-      app.translator.trans("core.forum.header.sign_up_link") + "/" + app.translator.trans("core.forum.header.log_in_link")
+        app.translator.trans("core.forum.header.sign_up_link") + "/" +
+        app.translator.trans("core.forum.header.log_in_link")
       </a>
     );
   });
