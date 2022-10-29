@@ -1,6 +1,6 @@
 <?php
 
-namespace V17Development\FlarumThirdPartyLoginOnly\Api;
+namespace DamonHu\Flarum\Api;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -12,8 +12,6 @@ class ApiRouteDisabledController implements RequestHandlerInterface
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
         return new JsonResponse([
-            "status" => 403,
-            "error" => "Route disabled"
-        ], 403);
+        ], 200);
     }
 }

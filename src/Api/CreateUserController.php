@@ -1,6 +1,6 @@
 <?php
 
-namespace V17Development\FlarumThirdPartyLoginOnly\Api;
+namespace DamonHu\Flarum\Api;
 
 use Flarum\Api\Serializer\CurrentUserSerializer;
 use Flarum\Http\RequestUtil;
@@ -38,9 +38,9 @@ class CreateUserController extends AbstractCreateController
     protected function data(ServerRequestInterface $request, Document $document)
     {
         // Disable normal sign ups (without oAuth token)
-        if(!Arr::has($request->getParsedBody(), 'data.attributes.token')) {
-            throw new PermissionDeniedException("Route is disabled");
-        }
+        // if(!Arr::has($request->getParsedBody(), 'data.attributes.token')) {
+        //     throw new PermissionDeniedException("Route is disabled");
+        // }
 
         return $this->bus->dispatch(
             new RegisterUser(RequestUtil::getActor($request), Arr::get($request->getParsedBody(), 'data', []))

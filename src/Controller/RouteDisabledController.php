@@ -1,6 +1,6 @@
 <?php
 
-namespace V17Development\FlarumThirdPartyLoginOnly\Controller;
+namespace DamonHu\Flarum\Api;
 
 use Flarum\Frontend\Document;
 use Psr\Http\Message\ServerRequestInterface;
