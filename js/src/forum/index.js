@@ -9,7 +9,7 @@ app.initializers.add("flarum-login-modal", (app) => {
   // Hide login form
   extend(LogInModal.prototype, "fields", function (items) {
     items.remove("identification");
-    items.remove("password");
+    // items.remove("password");
     items.remove("remember");
     // items.remove("submit");
     items.replace(
