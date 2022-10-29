@@ -14,7 +14,18 @@ app.initializers.add('damonhu/flarum-login-modal', () => {
     items.remove("identification");
     items.remove("password");
     items.remove("remember");
-    items.remove("submit");
+    // items.remove("submit");
+
+    items.replace(
+      "submit",
+      LogInButton.component(
+        {
+          className: "Button Button--link",
+          path: "/auth/passport",
+        },
+        app.translator.trans("core.forum.header.sign_up_link")
+      )
+    );
   });
 
   // Hide sign up form
