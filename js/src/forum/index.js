@@ -27,12 +27,16 @@ app.initializers.add("flarum-login-modal", (app) => {
     items.replace(
       "submit",
       <a
-        href={"https://account.yechan.cn/#/?referer=" + encodeURIComponent(window.location.href)}
+        href={
+          "https://account.yechan.cn/#/?referer=" +
+          encodeURIComponent(window.location.href)
+        }
         target={"_top"}
         className="Button Button--primary"
       >
-        {app.translator.trans("core.forum.header.sign_up_link") + "/" +
-        app.translator.trans("core.forum.header.log_in_link")}
+        {app.translator.trans("core.forum.header.sign_up_link") +
+          "/" +
+          app.translator.trans("core.forum.header.log_in_link")}
       </a>
     );
   });
