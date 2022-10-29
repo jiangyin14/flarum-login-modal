@@ -16,8 +16,7 @@ app.initializers.add("flarum-login-modal", function () {
           </a>
         </span>
       ),
-      setting:
-        "flarum-login-modal.replaceLoginWithFoFPassport",
+      setting: "flarum-login-modal.replaceLoginWithFoFPassport",
       type: "switch",
     })
     .registerSetting({
