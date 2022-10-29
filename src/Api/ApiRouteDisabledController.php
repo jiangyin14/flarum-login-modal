@@ -9,9 +9,9 @@ use Laminas\Diactoros\Response\JsonResponse;
 
 class ApiRouteDisabledController implements RequestHandlerInterface
 {
-    public function handle(ServerRequestInterface $request): ResponseInterface
-    {
-        return new JsonResponse([
-        ], 200);
-    }
+    // public function handle(ServerRequestInterface $request): ResponseInterface
+    // {
+    //     return new JsonResponse([
+    //     ], 200);
+    // }
 }
