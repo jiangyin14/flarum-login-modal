@@ -1,6 +1,6 @@
 {
     "name": "damonhu/flarum-login-modal",
-    "description": "test",
+    "description": "夜蝉禁用flarum账号登陆，改用自有账号体系登陆",
     "keywords": [
         "flarum",
         "login",
