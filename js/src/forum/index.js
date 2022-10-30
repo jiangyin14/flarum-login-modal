@@ -34,9 +34,7 @@ app.initializers.add("flarum-login-modal", (app) => {
         target={"_top"}
         className="Button Button--primary"
       >
-        {app.translator.trans("core.forum.header.sign_up_link") +
-          "/" +
-          app.translator.trans("core.forum.header.log_in_link")}
+        {app.translator.trans("core.forum.header.log_in_link") + "/" + app.translator.trans("core.forum.header.sign_up_link")}
       </a>
     );
   });
@@ -99,10 +97,10 @@ app.initializers.add("flarum-login-modal", (app) => {
       "logIn",
       LogInButton.component(
         {
-          className: "Button Button--link",
+          className: "Button Button--primary",
           path: "/auth/passport",
         },
-        app.translator.trans("core.forum.header.log_in_link")
+        app.translator.trans("core.forum.header.log_in_link") + "/" + app.translator.trans("core.forum.header.sign_up_link")
       )
     );
   });
