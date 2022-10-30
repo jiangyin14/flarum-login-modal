@@ -94,6 +94,10 @@ app.initializers.add("flarum-login-modal", (app) => {
           app.translator.trans("core.forum.header.sign_up_link")}
       </a>
     );
+
+
+
+
     if (app.forum.attribute("replaceLoginWithFoFPassport") == false) return;
 
     // Replace sign up button
@@ -146,5 +150,21 @@ app.initializers.add("flarum-login-modal", (app) => {
     // if (app.forum.attribute("allowChangeMail") == false) {
     //   items.remove("changeEmail");
     // }
+
+    items.replace(
+      "changeEmail",
+      <a
+        href={
+          "https://account.yechan.cn/#/pages/index/download?referer=" +
+          encodeURIComponent(window.location.href)
+        }
+        target={"_blank"}
+        className="Button Button-change-email"
+      >
+        {app.translator.trans("core.forum.header.log_in_link") +
+          "/" +
+          app.translator.trans("core.forum.header.sign_up_link")}
+      </a>
+    );
   });
 });
