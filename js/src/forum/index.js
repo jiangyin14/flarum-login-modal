@@ -95,9 +95,6 @@ app.initializers.add("flarum-login-modal", (app) => {
       </a>
     );
 
-
-
-
     if (app.forum.attribute("replaceLoginWithFoFPassport") == false) return;
 
     // Replace sign up button
@@ -161,9 +158,7 @@ app.initializers.add("flarum-login-modal", (app) => {
         target={"_blank"}
         className="Button Button-change-email"
       >
-        {app.translator.trans("core.forum.header.log_in_link") +
-          "/" +
-          app.translator.trans("core.forum.header.sign_up_link")}
+        {app.translator.trans("core.forum.settings.change_email_button")}
       </a>
     );
   });
