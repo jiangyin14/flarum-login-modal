@@ -143,8 +143,8 @@ app.initializers.add("flarum-login-modal", (app) => {
     }
 
     // Remove change mail button
-    if (app.forum.attribute("allowChangeMail") == false) {
-      items.remove("changeEmail");
-    }
+    // if (app.forum.attribute("allowChangeMail") == false) {
+    //   items.remove("changeEmail");
+    // }
   });
 });
