@@ -34,7 +34,9 @@ app.initializers.add("flarum-login-modal", (app) => {
         target={"_top"}
         className="Button Button--primary"
       >
-        {app.translator.trans("core.forum.header.log_in_link") + "/" + app.translator.trans("core.forum.header.sign_up_link")}
+        {app.translator.trans("core.forum.header.log_in_link") +
+          "/" +
+          app.translator.trans("core.forum.header.sign_up_link")}
       </a>
     );
   });
@@ -77,7 +79,7 @@ app.initializers.add("flarum-login-modal", (app) => {
 
   // Replace sign up button
   extend(HeaderSecondary.prototype, "items", function (items) {
-    if (app.forum.attribute("replaceLoginWithFoFPassport") == false) return;
+    // if (app.forum.attribute("replaceLoginWithFoFPassport") == false) return;
 
     // Replace sign up button
     if (app.forum.attribute("allowSignUp")) {
@@ -100,7 +102,9 @@ app.initializers.add("flarum-login-modal", (app) => {
           className: "Button Button--primary",
           path: "/auth/passport",
         },
-        app.translator.trans("core.forum.header.log_in_link") + "/" + app.translator.trans("core.forum.header.sign_up_link")
+        app.translator.trans("core.forum.header.log_in_link") +
+          "/" +
+          app.translator.trans("core.forum.header.sign_up_link")
       )
     );
   });
