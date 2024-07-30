@@ -15,7 +15,8 @@ app.initializers.add("flarum-login-modal", (app) => {
       "submit",
       <a
         href={
-          "https://account.yechan.cn/?referer=" + encodeURIComponent(window.location.href)
+          "https://account.yechan.cn/?referer=" +
+          encodeURIComponent(window.location.href)
         }
         target={"_top"}
         className="Button Button--primary"
