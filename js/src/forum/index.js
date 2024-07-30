@@ -11,25 +11,11 @@ app.initializers.add("flarum-login-modal", (app) => {
     items.remove("identification");
     items.remove("password");
     items.remove("remember");
-    // items.remove("submit");
-    // items.replace(
-    //   "submit",
-    //   LogInButton.component(
-    //     {
-    //       className: "Button Button--primary",
-    //       path: "/login.php",
-    //     },
-    //     app.translator.trans("core.forum.header.sign_up_link") +
-    //       "/" +
-    //       app.translator.trans("core.forum.header.log_in_link")
-    //   )
-    // );
     items.replace(
       "submit",
       <a
         href={
-          "https://account.yechan.cn/#/?referer=" +
-          encodeURIComponent(window.location.href)
+          "https://account.yechan.cn/?referer=" + encodeURIComponent(window.location.href)
         }
         target={"_top"}
         className="Button Button--primary"
@@ -83,7 +69,7 @@ app.initializers.add("flarum-login-modal", (app) => {
       "logIn",
       <a
         href={
-          "https://account.yechan.cn/#/?referer=" +
+          "https://account.yechan.cn/?referer=" +
           encodeURIComponent(window.location.href)
         }
         target={"_top"}
@@ -96,33 +82,6 @@ app.initializers.add("flarum-login-modal", (app) => {
     );
 
     if (app.forum.attribute("replaceLoginWithFoFPassport") == false) return;
-
-    // Replace sign up button
-    // if (app.forum.attribute("allowSignUp")) {
-    //   items.replace(
-    //     "signUp",
-    //     LogInButton.component(
-    //       {
-    //         className: "Button Button--link",
-    //         path: "/auth/passport",
-    //       },
-    //       app.translator.trans("core.forum.header.sign_up_link")
-    //     )
-    //   );
-    // }
-
-    // items.replace(
-    //   "logIn",
-    //   LogInButton.component(
-    //     {
-    //       className: "Button Button--primary",
-    //       path: "/auth/passport",
-    //     },
-    //     app.translator.trans("core.forum.header.log_in_link") +
-    //       "/" +
-    //       app.translator.trans("core.forum.header.sign_up_link")
-    //   )
-    // );
   });
 
   // Remove 'Password' button
@@ -152,7 +111,7 @@ app.initializers.add("flarum-login-modal", (app) => {
       "changeEmail",
       <a
         href={
-          "https://account.yechan.cn/#/pages/index/download?referer=" +
+          "https://account.yechan.cn/info?referer=" +
           encodeURIComponent(window.location.href)
         }
         target={"_blank"}
