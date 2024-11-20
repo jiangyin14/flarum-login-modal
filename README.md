@@ -52,3 +52,7 @@ brew link --overwrite --force node@16
 ```
 export NODE_OPTIONS=--openssl-legacy-provider
 ```
+
+## 发布新版
+
+github打tag，之后去[https://packagist.org/](https://packagist.org/)，可以使用github账号快捷登录。登录之后选择My packages，进入相应项目，点击更新即可。
