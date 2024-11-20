@@ -103,11 +103,9 @@ app.initializers.add("flarum-login-modal", (app) => {
       items.remove("changePassword");
     }
 
-    // Remove change mail button
-    // if (app.forum.attribute("allowChangeMail") == false) {
-    //   items.remove("changeEmail");
-    // }
-
+    //删除更改昵称按钮
+    items.remove("changeNickname");
+    //替换更换邮箱按钮
     items.replace(
       "changeEmail",
       <a
@@ -118,7 +116,7 @@ app.initializers.add("flarum-login-modal", (app) => {
         target={"_blank"}
         className="Button Button-change-email"
       >
-        {app.translator.trans("core.forum.settings.change_email_button")}
+        {app.translator.trans("core.forum.settings.account_heading")}
       </a>
     );
   });

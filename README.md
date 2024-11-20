@@ -16,7 +16,9 @@ composer require DamonHu/flarum-login-modal
 composer update DamonHu/flarum-login-modal
 ```
 
-代码更新，下载仓库，进入js目录 
+## 代码更新步骤
+
+下载仓库，进入`js`目录 
 
 安装依赖
 
@@ -36,14 +38,16 @@ npm install webpack webpack-cli -g
 npm run build
 ```
 
-如果报错，切到16
+### 运行报错处理
+
+运行报错是因为node版本不兼容，切到16
 
 ```
 brew unlink node@18
 brew link --overwrite --force node@16
 ```
 
-执行
+再执行
 
 ```
 export NODE_OPTIONS=--openssl-legacy-provider
